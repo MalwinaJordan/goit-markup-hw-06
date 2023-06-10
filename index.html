@@ -253,7 +253,8 @@
                             type="email"
                             name="email"
                             id="email"
-                            placeholder="E-mail">
+                            placeholder="E-mail"
+                            required>
                         </label>
                     </form>
                     <div class="sign-up-button">
@@ -271,8 +272,9 @@
 <div class="modal-backdrop is-hidden" data-modal>
     <div class="modal">
         <div class="form-modal-close">
-            <button class="modal-button" data-modal-close><svg width="30px" height="30px">
-                <use href="images/icon-close.svg#icon-close"></use></svg>
+            <button class="modal-button" data-modal-close>
+                <svg width="18px" height="18px">
+                <use href="images/x-icon.svg#icon-close-icon"></use></svg>
             </button>
         </div>
         <div>
@@ -282,7 +284,7 @@
             <form class="form-modal">
 
             <div class="input-box">
-                <label class="label-title" for="name">
+                <label class="label-title" for="name" required>
                     <p>Imię</p>
                         <svg class="input-icon" width="15px" height="15px"><use href="images/modal-icons.svg#icon-person-black-18dp-1"></use></svg>
                             <input class="input-field"
@@ -293,7 +295,7 @@
             </div>
 
             <div class="input-box">
-                <label class="label-title" for="phone_number">
+                <label class="label-title" for="phone_number" required>
                     <p>Telefon</p>
                         <svg class="input-icon" width="15px" height="15px"><use href="images/modal-icons.svg#icon-phone-black-18dp-1"></use></svg>
                             <input class="input-field"
@@ -305,7 +307,7 @@
             </div>
 
             <div class="input-box">
-                <label class="label-title" for="email">
+                <label class="label-title" for="email" required>
                     <p>E-mail</p>
                         <svg class="input-icon" width="15px" height="15px"><use href="images/modal-icons.svg#icon-email-black-18dp-1"></use></svg>
                             <input class="input-field"
@@ -320,20 +322,25 @@
                 <label class="label-title comment" for="comment">
                     <p>Komentarz</p>
                     
-                    <textarea 
-                        name="comment" 
-                        rows="5" 
+                    <textarea
                         id="comment" 
-                        placeholder="Wprowadź tekst">
+                        name="comment" 
+                        placeholder="Wprowadź tekst"
+                        rows="5">
                     </textarea>
                     
                 </label>
             </div>
 
-            <div class="input-box policy">
-                <label class="label-title">
-                    <input type="radio" name="policy" value="policy" />
-                    Oświadczam iż akceptuję <a href="index.html">Regulamin</a> i <a href="index.html">Politykę Prywatności</a>.
+            <div class="input-box">
+                <label class="label-title-policy">
+                    <input class="checkbox-box" type="checkbox" name="policy" value="policy" />
+
+                    <svg class="unchecked-icon" width="16px" height="15px"><use href="images/modal-icons.svg#icon-icon-checked-checkbox"></use></svg>
+
+                    <svg class="checked-icon" width="16px" height="15px"><use href="images/modal-icons.svg#icon-icon-checkbox"></use></svg>
+                        <p>Oświadczam iż akceptuję 
+                        <a href="index.html">Regulamin</a> i <a href="index.html">Politykę Prywatności</a>.</p>
                 </label>
             </div>
 
