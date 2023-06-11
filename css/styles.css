@@ -758,6 +758,7 @@ margin-top: 2px;
 
 .label-title-policy {
     display: flex;
+    align-items: center;
     position: relative;
     font-style: normal;
     max-height: 24px;
@@ -771,17 +772,31 @@ margin-top: 2px;
     margin-bottom: 30px;
 }
 
+.label-title-policy p {
+    padding-left: 7px;
+}
+
 .checkbox-box {
     width: 16px;
     height: 15px;
+    appearance: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.unchecked-icon {
-
+.checkbox-box:checked + .checked-icon > .unchecked-icon {
+    visibility: visible;
+    scale: 1;
 }
 
 .checked-icon {
+    position: absolute;
+    visibility: hidden;
+}
 
+.unchecked-icon {
+    position: absolute;
+    z-index: 10;
 }
 
 .label-title-policy a {
@@ -876,7 +891,6 @@ textarea:focus {
     outline: none;
     border-color: #2196F3;
 }
-
 
 input placeholder {
     font-size: 12px;
