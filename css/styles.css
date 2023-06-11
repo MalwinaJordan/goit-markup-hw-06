@@ -744,7 +744,6 @@ margin-top: 2px;
 
 .input-box {
     display: block;
-    position: absolute;
     width: 100%;
     max-height: 100%;
     position: relative;
@@ -767,7 +766,7 @@ margin-top: 2px;
     line-height: 171%;
     letter-spacing: 0.03em;
     color: #757575;
-    padding-bottom: 4px;
+
     margin-left: 55px;
     margin-bottom: 30px;
 }
@@ -779,25 +778,32 @@ margin-top: 2px;
 .checkbox-box {
     width: 16px;
     height: 15px;
-    appearance: none;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    visibility: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.checkbox-box:checked + .checked-icon > .unchecked-icon {
-    visibility: visible;
-    scale: 1;
-}
 
 .checked-icon {
     position: absolute;
+    width: 16px;
+    height: 15px;
     visibility: hidden;
 }
 
-.unchecked-icon {
-    position: absolute;
+.checkbox-box:checked {
+    background-image: url(/images/icons-checkbox.svg#icon-icon-checked-checkbox);
     z-index: 10;
 }
+.unchecked-icon {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+}
+
 
 .label-title-policy a {
     text-decoration: underline;
