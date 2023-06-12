@@ -766,7 +766,6 @@ margin-top: 2px;
     line-height: 171%;
     letter-spacing: 0.03em;
     color: #757575;
-
     margin-left: 55px;
     margin-bottom: 30px;
 }
@@ -784,24 +783,37 @@ margin-top: 2px;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    opacity: 0;
 }
-
 
 .checked-icon {
     position: absolute;
     width: 16px;
     height: 15px;
     visibility: hidden;
+    pointer-events: none;
+}
+
+.unchecked-icon {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.checkbox-box:checked ~ .checked-icon {
+    visibility: visible;
+    background: red;
 }
 
 .checkbox-box:checked {
     background-image: url(/images/icons-checkbox.svg#icon-icon-checked-checkbox);
     z-index: 10;
 }
-.unchecked-icon {
-    position: absolute;
-    width: 16px;
-    height: 15px;
+
+.checkbox-box:not(:checked) ~ .unchecked-icon {
+    visibility: visible;
 }
 
 
